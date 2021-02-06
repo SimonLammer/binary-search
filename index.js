@@ -25,7 +25,7 @@ module.exports = function(haystack, needle, comparator, low, high) {
     // works for array lengths <= 2**32-1 which is also Javascript's max array
     // length.
     mid = low + ((high - low) >>> 1);
-    cmp = +comparator(haystack[mid], needle, mid, haystack);
+    cmp = comparator(haystack[mid], needle, mid, haystack);
 
     // Too low.
     if(cmp < 0.0)
